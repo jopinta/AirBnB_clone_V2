@@ -5,7 +5,7 @@ from sqlalchemy import String, DateTime
 from sqlalchemy import Column, ForeignKey, Integer
 from sqlalchemy import Float, Table
 
-class Place(BaseModel, Base):
+class Place(BaseModel):
     """ A place to stay """
     __tablename__ = 'places'
     city_id = Column(String(60), ForeignKey('cities.id'), nullable=False)
