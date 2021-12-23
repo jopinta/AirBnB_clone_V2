@@ -73,11 +73,8 @@ class HBNBCommand(cmd.Cmd):
                 pline = pline[2].strip()  # pline is now str
                 if pline:
                     # check for *args or **kwargs
-<<<<<<< HEAD
                     if pline[0] == '{' and pline[-1] == '}'\
-=======
-                    if pline[0] is '{' and pline[-1] is '}'\
->>>>>>> ee3dfe8a978b3bb691ebec24f4421d75b825beab
+                    if pline[0] == '{' and pline[-1] == '}'\
                             and type(eval(pline)) is dict:
                         _args = pline
                     else:
