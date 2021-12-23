@@ -31,3 +31,14 @@ class test_state(test_basemodel):
     def test_attribute_types_State(self):
         """test attributes type of State class"""
         self.assertEqual(type(self.state.name), str)
+
+    @unittest.skipIf(
+        getenv('HBNB_TYPE_STORAGE') == 'db',
+        "This test only work in Filestorage")
+    def test_save_State(self):
+        """test save function of State class"""
+        self.state.save()
+        self.assertNotEqual(self.state.created_at, self.state.updated_at)
+
+if __name__ == "__main__":
+    unittest.main()
