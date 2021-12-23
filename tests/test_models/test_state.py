@@ -17,3 +17,17 @@ class test_state(test_basemodel):
         """ """
         new = self.value()
         self.assertEqual(type(new.name), str)
+
+        def test_pep8_State(self):
+        """ test pep8 Review class"""
+        style = pep8.StyleGuide(quiet=True)
+        p = style.check_files(['models/state.py'])
+        self.assertEqual(p.total_errors, 0, "pep8 errors")
+
+    def test_docstring_State(self):
+        """test docstring State class"""
+        self.assertIsNotNone(State.__doc__)
+
+    def test_attribute_types_State(self):
+        """test attributes type of State class"""
+        self.assertEqual(type(self.state.name), str)
