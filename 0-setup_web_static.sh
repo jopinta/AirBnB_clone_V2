@@ -12,11 +12,8 @@ printf %s "<html>
     Holberton School
   </body>
 </html>" > /data/web_static/releases/test/index.html
-sudo ln -sf /data/web_static/releases/test/ /data/web_static/\
-current/
-chown -R ubuntu:ubuntu /data/
+ln -sf /data/web_static/releases/test/ /data/web_static/current/
+chown -R ubuntu /data/
 chgrp -R ubuntu /data
-sed -i "/listen 80 default_server/a location /hbnb_stati\
-c/ { alias /data/web_static/current/; autoindex off;}" /\
-etc/nginx/sites-available/default
+sed -i "/listen 80 default_server/a location /hbnb_static/ { alias /data/web_static/current/;}" \etc/nginx/sites-available/default
 service nginx start
