@@ -18,4 +18,4 @@ chown -R ubuntu:ubuntu /data/
 sed -i "/listen 80 default_server/a location /hbnb_stati\
 c/ { alias /data/web_static/current/; autoindex off;}" /\
 etc/nginx/sites-available/default
-service nginx restart
+service nginx start
