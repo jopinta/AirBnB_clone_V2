@@ -23,14 +23,14 @@ def c_text():
     return 'C {}'.format(text.replace('_', ' '))
 
 
-@app.route('/python/', strict_slashes=false)
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>')
 def python(text="is cool"):
     '''same with py'''
     return 'Python {}'.format(text.replace('_', ' '))
 
 
-@app.route("/number/<int:n>", strict_slashes=false)
+@app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     '''display int'''
     return '{} is a number'.format(n)
