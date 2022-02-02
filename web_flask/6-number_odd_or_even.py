@@ -48,9 +48,9 @@ def template(n):
 def par_inpar(n):
     '''even or odd to display if is int'''
     if (n % 2 == 0):
-        return render_template('6-number_odd_or_even.html', n=n, even=True)
+        return (render_template('6-number_odd_or_even.html', n=n, even=True))
     else:
-        return render_templare('6-number_odd_or_even.html', n=n, even=True)
+        return (render_template('6-number_odd_or_even.html', n=n, even=False))
 
 
 if __name__ == "__main__":
