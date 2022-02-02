@@ -23,12 +23,12 @@ def c_text():
     return 'C {}'.format(text.replace('_', ' '))
 
 
-@app.route('/python/')
-@app.route('/pyrhon/<text>')
+@app.route('/python/', strict_slashes=False)
+@app.route('/python/<text>')
 def python(text="is cool"):
     '''same with py'''
     return 'Python {}'.format(text.replace('_', ' '))
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0.', port=5000)
+    app.run(host='0.0.0.0', port=5000)
