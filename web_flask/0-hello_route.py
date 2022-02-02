@@ -8,7 +8,7 @@ app.url_map.srict_slashes = False
 
 @app.route('/')
 def hello_hbnb():
-    '''adding perms '''
+    '''to display'''
     return 'Hello HBNB!'
 
 

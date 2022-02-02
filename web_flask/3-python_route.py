@@ -13,17 +13,20 @@ def hello_hbnb():
 
 @app.route('/hbnb', strict_slashes=False)
 def hi_hbnb():
+    '''an other one'''
     return 'HBNB'
 
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_text():
+    '''display with value'''
     return 'C {}'.format(text.replace('_', ' '))
 
 
 @app.route('/python/')
 @app.route('/pyrhon/<text>')
 def python(text="is cool"):
+    '''same with py'''
     return 'Python {}'.format(text.replace('_', ' '))
 
 
