@@ -26,7 +26,7 @@ def c_text():
 
 
 @app.route('/python/', strict_slashes=False)
-@app.route('/pyrhon/<text>')
+@app.route('/python/<text>')
 def python(text="is cool"):
     '''same with py'''
     return 'Python {}'.format(text.replace('_', ' '))
@@ -41,7 +41,7 @@ def number(n):
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def template(n):
      """display if n is an int"""
-    return render_template('5-number.html', num=n)
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == "__main__":
