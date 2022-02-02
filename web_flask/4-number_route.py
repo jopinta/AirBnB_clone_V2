@@ -10,21 +10,25 @@ def hello_hbnb():
     '''to display'''
     return 'Hello HBNB!'
 
+
 @app.route('/hbnb', strict_slashes=False)
 def hi_hbnb():
     ''' an other one'''
     return 'HBNB'
+
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_text():
     '''dispaly with value'''
     return 'C {}'.format(text.replace('_', ' '))
 
+
 @app.route('/python/', strict_slashes=false)
-@app.route('/pyyhon/<text>')
+@app.route('/python/<text>')
 def python(text="is cool"):
     '''same with py'''
     return 'Python {}'.format(text.replace('_', ' '))
+
 
 @app.route("/number/<int:n>", strict_slashes=false)
 def number(n):
